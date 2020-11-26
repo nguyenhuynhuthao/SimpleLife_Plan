@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="12dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:hint="Ngày tháng năm: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_date"
+                android:gravity="center"
+                android:fontFamily="@font/amita"
+                android:text="Ngày tháng năm: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/date"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:hint="Tên Kế Hoạch: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/date"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_title"
+                android:gravity="center"
+                android:fontFamily="@font/amita"
+                android:text="Tên Kế Hoạch: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/date"
+                android:layout_toRightOf="@+id/title"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/place"
+                android:hint="Nơi diễn ra: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_place"
+                android:gravity="center"
+                android:fontFamily="@font/amita"
+                android:text="Nơi diễn ra: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/place"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bring"
+                android:hint="Cần Lưu Ý Gì: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/place"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_bring"
+                android:gravity="center"
+                android:fontFamily="@font/amita"
+                android:text="Cần Lưu Ý Gì: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/place"
+                android:layout_toRightOf="@+id/bring"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time"
+                android:hint="Thời gian: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/bring"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_time"
+                android:gravity="center"
+                android:fontFamily="@font/amita"
+                android:text="Thời gian: "
+                android:textColor="@color/darkenough"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_below="@+id/bring"
+                android:layout_toRightOf="@+id/time"
+                android:layout_marginTop="5dp"
+                />
+            
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btnAlarmme"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_action_notification_off"
+                android:background="@color/teal_200"
+                android:layout_below="@+id/time"
+                android:layout_marginLeft="142dp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btndelete"
+                android:text="Xóa"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/btnAlarmme"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

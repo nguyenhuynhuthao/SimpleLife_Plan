@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkenough">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edt_title_event"
+        tools:ignore="MissingConstraints"
+        android:fontFamily="@font/amita"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Tên Kế Hoạch"
+        android:inputType="textShortMessage"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edt_place_event"
+        tools:ignore="MissingConstraints"
+        android:hint="Nơi Tổ Chức Kế Hoạch"
+        android:fontFamily="@font/amita"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textShortMessage"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/edt_title_event"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llo_time_event"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/edt_place_event"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/seteventtime"
+            android:src="@drawable/b_time_icon_32"
+            android:background="@color/sakura"
+            android:layout_weight="1"
+            android:contentDescription="TODO"
+            tools:ignore="HardcodeText,ContentDescription"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventtime"
+            android:text="00:00 A.M"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarme"
+            android:text="Nhắc Nhở Tôi"
+            android:fontFamily="@font/amita"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edt_bring_event"
+        tools:ignore="MissingConstraints"
+        android:hint="Những Gì Cần Lưu Ý"
+        android:fontFamily="@font/amita"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textShortMessage"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/llo_time_event"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addevent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_bring_event"
+        tools:ignore="MissingConstraints"
+        android:text="Thêm Kế Hoạch"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/amita"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

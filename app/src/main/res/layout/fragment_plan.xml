@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PlanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--Khoi tao vung phan chia khung hinh-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/gl_ver_50"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.5"/>-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hor_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/gl_hor_50"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_percent="0.5"/>-->
+
+    <TextView
+        android:id="@+id/plan_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amita"
+        android:text="@string/title_plan_fragment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/gl_hor_10"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/new_button"-->
+<!--        android:layout_width="@dimen/_30sdp"-->
+<!--        android:layout_height="@dimen/_30sdp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/b_plus_64"-->
+<!--        android:background="@color/darkenough"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        android:layout_marginBottom="@dimen/_10sdp"-->
+<!--        android:layout_marginRight="@dimen/_5sdp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/gl_hor_10"-->
+<!--        app:layout_constraintRight_toRightOf="parent"/>-->
+
+    <TextView
+        android:id="@+id/calender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amita"
+        android:text="Chọn Ngày"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@+id/plan_tv"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+<!--    Create the planning-->
+    <LinearLayout
+        android:id="@+id/lnlo_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/calender_tv"
+        >
+
+        <ImageButton
+            android:id="@+id/previousBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/b_back_32"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_Date"
+            tools:ignore="MissingConstraints"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amita"
+            android:text="CurrentDate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            />
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/b_small_next_32"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+            tools:ignore="MissingConstraints"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llo_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/lnlo_date"
+        android:background="@color/darkenough"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Sun"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Mon"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Tue"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Wed"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Thu"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Fri"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/amita"
+            android:text="Sat"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+<!--    GridItem là một ô (cell) riêng lẻ trong gridview nơi mà dữ liệu
+sẽ được hiển thị. Bất kỳ dữ liệu nào trong gridview chỉ được hiển thị
+thông qua griditem.-->
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/gridview"
+        app:layout_constraintTop_toBottomOf="@+id/llo_days"
+        android:numColumns="7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </GridView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
